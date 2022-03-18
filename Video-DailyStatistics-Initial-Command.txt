@@ -1,0 +1,23 @@
+CREATE DATABASE 'tellyo';
+USE 'tellyo';
+
+CREATE TABLE video (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(64) NOT NULL,
+  created_on timestamp NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+)
+
+CREATE TABLE DailyStatistics (
+    stats_id int(11) AUTO_INCREMENT,
+    snapshot_time DATE NOT NULL,
+    views int(11) NOT NULL,
+    comments int(11) NOT NULL,
+    related_video_id int NOT NULL
+    PRIMARY KEY (`stats_id`),
+    FOREIGN KEY (related_video_id)
+                             REFERENCES video(id)
+                             ON DELETE CASCADE
+
+)
