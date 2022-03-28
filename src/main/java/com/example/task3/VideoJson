@@ -1,0 +1,26 @@
+//Video
+
+{
+    "id": 4787007,
+    "name": "Test1",
+    "created_on": 3600
+}
+
+// Daily Statistics
+
+[
+    {
+        "stats_id": 5788861,
+        "snapshot_time": 86400,
+        "views": 456,
+        "comments": 475,
+        "related_video_id": 4787007
+    },
+    {
+        "stats_id": 5788867,
+        "snapshot_time": 172800,
+        "views": 765,
+        "comments": 657,
+        "related_video_id": 4787007
+    }
+]
